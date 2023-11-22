@@ -5,12 +5,12 @@ def caesar(str, offset):
     return strOut
 
 def caesarChar(char, offset):
-    base = 65 # 65(gross) oder 97(klein) ; base = start in der ascii tabelle
-    if char.islower():
-        base = 97
     index = ord(char)
     if index == 32: # leertasten check
         return " "
+    base = 65 # 65(gross) oder 97(klein) ; base = start in der ascii tabelle
+    if char.islower():
+        base = 97
     newIndex = (index - base + offset) % 26 + base
     char = chr(newIndex)
     return char
