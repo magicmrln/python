@@ -14,7 +14,7 @@ def calculateResult():
 # window
 window = tk.Tk()
 
-window.title("Sum Calculator Gui")
+window.title("Sum Calculator")
 window.geometry("400x100")
 window.minsize(400, 100)
 
