@@ -13,6 +13,11 @@ def calculateResult():
     resultDisplay.config(text=result)
 
 
+def keypress(event):
+    window.focus_force()
+    calculateResult()
+
+
 # window
 window = tk.Tk()
 
@@ -44,6 +49,6 @@ resultDisplay.pack(side="left", padx=10)
 calculateButton.pack(side="left")
 frame1.pack(pady=6)
 
-
 # run
+window.bind_all("<Return>", keypress)
 window.mainloop()
